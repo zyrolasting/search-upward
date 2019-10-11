@@ -2,14 +2,13 @@
 @require[@for-label[search-upward
                     racket/base]]
 
-@title{Searching for Files Approaching Root Directory}
+@title{Search Filesystem While Approaching Root Directory}
 @author{Sage Gerard}
 
 @defmodule[search-upward]
-
-A small library for searching for a specific file or directory
-by walking up directories until hitting the root of the associated
-filesystem.
+Use this module to search for a specific file and/or directory
+where the search walks up directories until hitting the root
+of the associated filesystem.
 
 @defthing[upward-matcher/c (-> directory-exists? (or/c path? #f))]{
 A procedure that accepts a path to a directory @italic{D} and returns a path
